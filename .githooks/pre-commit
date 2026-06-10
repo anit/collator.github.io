@@ -1,0 +1,4 @@
+#!/bin/sh
+# Rebuild Tailwind CSS and stage the result so css/style.css never goes stale.
+npm run build || exit 1
+git add css/style.css
