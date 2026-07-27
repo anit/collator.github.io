@@ -1,4 +1,4 @@
 #!/bin/sh
-# Rebuild Tailwind CSS and stage the result so css/style.css never goes stale.
+# Sanity-check that the Eleventy + Tailwind build still succeeds.
+# _site/ is build output (gitignored), not committed, so nothing gets staged here.
 npm run build || exit 1
-git add css/style.css
