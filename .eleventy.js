@@ -28,6 +28,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('android-chrome-512x512.png');
   eleventyConfig.addPassthroughCopy('site.webmanifest');
   eleventyConfig.addPassthroughCopy('CNAME');
+  eleventyConfig.addPassthroughCopy('.nojekyll');
 
   return {
     dir: {
