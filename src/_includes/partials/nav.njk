@@ -1,0 +1,26 @@
+<header class="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 md:px-8 h-14 bg-navy border-b border-white/[.06]">
+  <a href="/" class="flex items-center gap-2.5">
+    <img src="/apple-touch-icon.png" alt="" width="26" height="26" class="rounded-lg">
+    <span class="font-serif font-medium text-white text-base" style="letter-spacing:-0.03em">Collator</span>
+  </a>
+  <nav class="hidden md:flex items-center gap-7 text-white/50 text-sm">
+    <details class="relative group">
+      <summary class="list-none cursor-pointer flex items-center gap-1.5 {% if section == 'who-its-for' %}text-white/80{% else %}hover:text-white/80{% endif %} transition-colors [&::-webkit-details-marker]:hidden">
+        Who it's for
+        {% icon "chevron-down", "w-3 h-3 transition-transform group-open:rotate-180" %}
+      </summary>
+      <div class="absolute left-0 top-full mt-3 w-48 bg-card border border-hair rounded-[14px] shadow-card p-2">
+        {% for item in site.whoItsFor %}
+        <a href="/who-its-for/{{ item.slug }}" class="block px-3 py-2 rounded-[8px] text-sm transition-colors {% if activePage == item.slug %}bg-tint text-ink font-medium{% else %}text-dim hover:bg-tint hover:text-ink{% endif %}">{{ item.label }}</a>
+        {% endfor %}
+      </div>
+    </details>
+  </nav>
+  <div class="flex items-center gap-2">
+    <!-- 44px min tap target on the mobile hamburger, per the design system's touch-target rule -->
+    <a href="#site-footer" class="md:hidden flex items-center justify-center w-11 h-11 -mr-2 text-white/60 hover:text-white/90 transition-colors" aria-label="Navigation">
+      {% icon "menu", "w-5 h-5" %}
+    </a>
+    <a href="{{ ctaHref }}" class="hidden md:inline-flex px-4 py-1.5 bg-saffron hover:bg-saffron-deep text-white text-sm font-medium rounded-full transition-colors">Get the app</a>
+  </div>
+</header>

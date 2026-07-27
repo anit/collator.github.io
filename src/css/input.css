@@ -31,7 +31,7 @@
 
 /* ─── Utilities ───────────────────────────────────────────────── */
 @layer utilities {
-  .overline {
+  .label-overline {
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.08em;
