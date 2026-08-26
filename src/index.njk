@@ -23,14 +23,22 @@ ctaHref: "#download"
 
       <!-- Desktop app preview: right column -->
       <div class="hidden md:flex items-center justify-center">
-        <div class="w-[252px] aspect-[9/19.5] rounded-[38px] border-2 border-white/10 bg-white/[.03]"></div>
+        <div class="w-[252px] aspect-[9/19.5] rounded-[38px] border-2 border-white/10 bg-white/[.03] overflow-hidden">
+          <video class="block w-full h-full object-cover rounded-[36px]" autoplay muted loop playsinline poster="/assets/video/hero-demo-poster.jpg">
+            <source src="/assets/video/hero-demo.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
 
     </div>
 
     <!-- Mobile app preview: below text, large, bleeds off screen -->
     <div class="md:hidden flex justify-center pt-4">
-      <div class="w-[72vw] max-w-[300px] aspect-[9/19.5] rounded-[2.5rem] border-2 border-white/15 bg-white/[.05]"></div>
+      <div class="w-[72vw] max-w-[300px] aspect-[9/19.5] rounded-[2.5rem] border-2 border-white/15 bg-white/[.05] overflow-hidden">
+        <video class="block w-full h-full object-cover rounded-[2.4rem]" autoplay muted loop playsinline poster="/assets/video/hero-demo-poster.jpg">
+          <source src="/assets/video/hero-demo.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
 
   </div>

@@ -29,6 +29,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('site.webmanifest');
   eleventyConfig.addPassthroughCopy('CNAME');
   eleventyConfig.addPassthroughCopy('.nojekyll');
+  eleventyConfig.addPassthroughCopy('src/assets');
 
   return {
     dir: {
