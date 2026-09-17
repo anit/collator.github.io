@@ -6,10 +6,9 @@ module.exports = {
     roadmap: 'https://collator.userjot.com/roadmap',
     changelog: 'https://collator.userjot.com/changelog',
   },
-  // Real store URLs not live yet. Keep as "#" until the app ships.
   stores: {
-    appStore: '#',
-    googlePlay: '#',
+    appStore: 'https://apps.apple.com/in/app/collator/id6791439666',
+    googlePlay: 'https://play.google.com/store/apps/details?id=com.r41.collator',
   },
   whoItsFor: [
     { slug: 'nri-families', label: 'NRI families' },
