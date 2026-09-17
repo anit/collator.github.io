@@ -19,6 +19,7 @@ module.exports = {
 
         // Fixed brand colours — always-dark sections stay dark in both modes.
         navy:             '#0C1829',
+        'navy-light':     'var(--navy-light)',
         saffron:          'var(--saffron)',
         'saffron-deep':   'var(--saffron-deep)',
         'saffron-accent': 'var(--saffron-acc)',

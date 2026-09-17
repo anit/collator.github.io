@@ -5,24 +5,27 @@
 /* ─── Design tokens: light mode ───────────────────────────────── */
 :root {
   /* Surfaces */
-  --canvas:        #F2F5FA;
+  --canvas:        #FAF7F3;
   --card:          #FFFFFF;
-  --tint:          #E8EDF5;
-  --inset:         #D8E0EC;
+  --tint:          #F5F0E9;
+  --inset:         #EBE3DA;
+
+  /* Navy — lighter variant for header/hero surfaces */
+  --navy-light:    #17283B;
 
   /* Text */
   --text-hi:       #0C1829;
   --text-dim:      #1E3254;
-  --text-muted:    #4E6A90;
+  --text-muted:    #5B4937;
 
   /* Borders */
   --border-hair:   rgba(12, 24, 41, 0.08);
   --border-strong: rgba(12, 24, 41, 0.22);
 
   /* Brand — saffron shifts subtly between modes */
-  --saffron:       #9E6510;
-  --saffron-deep:  #7A4E08;
-  --saffron-acc:   #C07E20;
+  --saffron:       #AA6D1B;
+  --saffron-deep:  #895710;
+  --saffron-acc:   #C9852E;
 
   /* Shadows */
   --shadow-card:   0px 1px 3px rgba(12, 24, 41, 0.04);
