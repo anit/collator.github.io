@@ -6,39 +6,35 @@ ogTitle: "Collator: One vault. Your entire estate."
 ogDescription: "A private vault for documents, assets, policies and people. Everything stored on your device. No cloud, no accounts."
 ogUrl: "https://collator.app"
 ctaHref: "#download"
+headerOverlay: true
 ---
 <!-- Hero -->
-<section class="bg-navy pt-14">
-  <div class="max-w-6xl mx-auto px-6 md:px-8 w-full">
+<section class="relative overflow-hidden">
+  <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline poster="/assets/video/hero-bg-poster.jpg">
+    <source src="/assets/video/hero-bg.mp4" type="video/mp4">
+  </video>
 
-    <div class="md:grid md:grid-cols-2 md:gap-16 md:items-center md:py-20">
+  <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-8 w-full pt-14">
+
+    <div class="grid grid-cols-1 items-center md:grid-cols-2 md:gap-16 md:py-20">
 
       <!-- Text -->
-      <div class="pt-12 pb-8 md:pt-0 md:pb-0">
-        <h1 class="font-serif font-normal text-white leading-[1.08] text-[3.5rem] md:text-[4.5rem] mb-6">One vault.<br>Your entire<br>estate.</h1>
-        <p class="text-[#C8D6E4] text-[1.0625rem] leading-relaxed mb-8 md:max-w-sm">Documents, assets, policies and people, organised the way you think. A calm, private place for everything your family would need to find.</p>
+      <div class="py-10 md:pt-0 md:pb-0">
+        <h1 class="font-serif font-normal text-white leading-[1.08] text-[2.75rem] md:text-[3.75rem] mb-16 md:mb-24">One vault.<br>Your entire<br>estate.</h1>
 
+        {% set hideCaption = true %}
         {% include "partials/download-buttons.njk" %}
       </div>
 
-      <!-- Desktop app preview: right column -->
+      <!-- App preview -->
       <div class="hidden md:flex items-center justify-center">
-        <div class="w-[252px] aspect-[9/19.5] rounded-[38px] border-2 border-white/10 bg-white/[.03] overflow-hidden">
-          <video class="block w-full h-full object-cover rounded-[36px]" autoplay muted loop playsinline poster="/assets/video/hero-demo-poster.jpg">
+        <div class="w-[150px] md:w-[190px] aspect-[9/19.5] rounded-[26px] md:rounded-[32px] border md:border-2 border-white/10 bg-white/[.03] overflow-hidden">
+          <video class="block w-full h-full object-cover rounded-[25px] md:rounded-[30px]" autoplay muted loop playsinline poster="/assets/video/hero-demo-poster.jpg">
             <source src="/assets/video/hero-demo.mp4" type="video/mp4">
           </video>
         </div>
       </div>
 
-    </div>
-
-    <!-- Mobile app preview: below text, large, bleeds off screen -->
-    <div class="md:hidden flex justify-center pt-4">
-      <div class="w-[72vw] max-w-[300px] aspect-[9/19.5] rounded-[2.5rem] border-2 border-white/15 bg-white/[.05] overflow-hidden">
-        <video class="block w-full h-full object-cover rounded-[2.4rem]" autoplay muted loop playsinline poster="/assets/video/hero-demo-poster.jpg">
-          <source src="/assets/video/hero-demo.mp4" type="video/mp4">
-        </video>
-      </div>
     </div>
 
   </div>
@@ -116,6 +112,7 @@ ctaHref: "#download"
 
 {% include "partials/promise-section.njk" %}
 
+{# Pricing section hidden until pricing is finalized. Re-enable by uncommenting.
 <!-- Pricing -->
 <section class="bg-canvas py-20 px-6 md:px-8">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
@@ -124,5 +121,71 @@ ctaHref: "#download"
       <p class="text-dim text-[1.0625rem] leading-relaxed opacity-70">Use it free during the trial. After that, new records need a single lifetime purchase. Viewing, editing, import and export stay free, always.</p>
     </div>
     {% include "partials/pricing-card.njk" %}
+  </div>
+</section>
+#}
+
+<!-- FAQ -->
+<section class="bg-canvas px-6 md:px-8 py-20">
+  <div class="max-w-[640px] mx-auto">
+    <h2 class="font-serif font-normal text-[2.25rem] leading-[1.15] mb-6 text-ink">Frequently asked questions</h2>
+
+    <div class="divide-y divide-hair">
+
+      <details class="group py-4">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <span class="text-ink text-[.9375rem] font-medium">Where is my data stored?</span>
+          {% icon "chevron-down", "w-4 h-4 text-muted shrink-0 transition-transform group-open:rotate-180" %}
+        </summary>
+        <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-3">
+          On your device, and only your device. Collator doesn't have a server, so there's nothing for us to see, lose or hand over. Read more on our <a href="/privacy" class="text-saffron hover:text-saffron-deep transition-colors">privacy page</a>.
+        </p>
+      </details>
+
+      <details class="group py-4">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <span class="text-ink text-[.9375rem] font-medium">What happens if I lose my phone?</span>
+          {% icon "chevron-down", "w-4 h-4 text-muted shrink-0 transition-transform group-open:rotate-180" %}
+        </summary>
+        <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-3">
+          If you have iCloud or Google account backup turned on, restoring your new phone from that backup brings your vault back too. This is why we recommend keeping device backups on, since we can't recover anything ourselves.
+        </p>
+      </details>
+
+      <details class="group py-4">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <span class="text-ink text-[.9375rem] font-medium">Can I get my data out of Collator?</span>
+          {% icon "chevron-down", "w-4 h-4 text-muted shrink-0 transition-transform group-open:rotate-180" %}
+        </summary>
+        <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-3">
+          Yes. Use the export option in the app to take a copy of your records whenever you want. Export and import are free, always, even after the trial ends.
+        </p>
+      </details>
+
+      <details class="group py-4">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <span class="text-ink text-[.9375rem] font-medium">How do I restore my purchase on a new device?</span>
+          {% icon "chevron-down", "w-4 h-4 text-muted shrink-0 transition-transform group-open:rotate-180" %}
+        </summary>
+        <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-3">
+          Open Settings inside the app and choose Restore Purchases, while signed in with the same Apple ID or Google account you originally purchased with.
+        </p>
+      </details>
+
+      <details class="group py-4">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <span class="text-ink text-[.9375rem] font-medium">How do I delete my information?</span>
+          {% icon "chevron-down", "w-4 h-4 text-muted shrink-0 transition-transform group-open:rotate-180" %}
+        </summary>
+        <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-3">
+          Delete individual records from within the app at any time, or uninstall Collator to remove everything stored locally. Whether a copy remains in your personal device backup is controlled by your iCloud or Google account settings.
+        </p>
+      </details>
+
+    </div>
+
+    <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-8">
+      Didn't find what you're looking for? Email us at <a href="mailto:{{ site.contactEmail }}" class="text-saffron hover:text-saffron-deep transition-colors">{{ site.contactEmail }}</a> and we'll help directly.
+    </p>
   </div>
 </section>
