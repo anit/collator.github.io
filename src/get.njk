@@ -1,0 +1,73 @@
+---
+permalink: "/get/"
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Ad link: sends phones to the right store and everyone else to the homepage.
+       Runs before anything renders so the redirect starts as early as possible.
+       location.replace keeps this page out of history, so Back doesn't bounce the user here again. -->
+  <script>
+    (function () {
+      var ua = navigator.userAgent || '';
+      var query = location.search;
+      // iPadOS 13+ reports itself as a Mac, so check for touch too.
+      var isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/i.test(ua);
+      var target;
+
+      if (isIOS) {
+        target = {{ site.stores.appStore | dump | safe }};
+      } else if (isAndroid) {
+        target = {{ site.stores.googlePlay | dump | safe }};
+        // Play passes this through as the install referrer, so ad UTM tags show up in Play Console.
+        if (query) target += '&referrer=' + encodeURIComponent(query.slice(1));
+      } else {
+        target = '/' + query;
+      }
+
+      location.replace(target);
+    })();
+  </script>
+
+  <title>Get Collator</title>
+  <meta name="description" content="Collator is a private digital estate vault for Indian families. Documents, assets, policies and people, organised on your device.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FFFCF5">
+  <meta property="og:title"       content="Collator: One vault. Your entire estate.">
+  <meta property="og:description" content="A private vault for documents, assets, policies and people. Everything stored on your device. No cloud, no accounts.">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://collator.app/get">
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:opsz,wght@14..32,400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-canvas font-sans text-ink">
+
+<!-- Fallback: shown for the moment before the redirect, without JavaScript,
+     and when someone comes back from the store inside an in-app browser. -->
+<main class="min-h-screen flex flex-col items-center justify-center px-4 py-12 text-center">
+  <img src="/icon-192.png" alt="" width="72" height="72" class="rounded-[18px] shadow-card mb-5">
+  <h1 class="font-serif font-medium text-[2rem] leading-[1.15] text-ink mb-2" style="letter-spacing:-0.03em">Collator</h1>
+  <p class="text-muted text-[.9375rem] mb-8">One vault. Your entire estate.</p>
+
+  <div class="flex justify-center">
+    {% set hideCaption = true %}
+    {% include "partials/download-buttons.njk" %}
+  </div>
+
+  <a href="/" class="text-muted text-sm underline underline-offset-4 hover:text-ink transition-colors mt-2">Visit collator.app</a>
+</main>
+
+</body>
+</html>
