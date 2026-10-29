@@ -20,7 +20,7 @@ headerOverlay: true
 
       <!-- Text -->
       <div class="py-10 md:pt-0 md:pb-0">
-        <h1 class="font-serif font-normal text-white leading-[1.08] text-[2.75rem] md:text-[3.75rem] mb-16 md:mb-24">One vault.<br>Your entire<br>estate.</h1>
+        <h1 class="font-bold tracking-tight text-parchment leading-[1.08] text-[2.75rem] md:text-[3.75rem] mb-16 md:mb-24">One vault.<br>Your entire<br>estate.</h1>
 
         {% set hideCaption = true %}
         {% include "partials/download-buttons.njk" %}
@@ -28,7 +28,7 @@ headerOverlay: true
 
       <!-- App preview -->
       <div class="hidden md:flex items-center justify-center">
-        <div class="w-[260px] aspect-[9/19.5] rounded-[40px] border-2 border-white/10 bg-white/[.03] overflow-hidden opacity-30 hover:opacity-100 transition-opacity duration-500">
+        <div class="w-[260px] aspect-[9/19.5] rounded-[40px] border-2 border-parchment/10 bg-parchment/[.03] overflow-hidden opacity-30 hover:opacity-100 transition-opacity duration-500">
           <video class="block w-full h-full object-cover rounded-[38px]" autoplay muted loop playsinline poster="/assets/video/hero-demo-poster.jpg">
             <source src="/assets/video/hero-demo.mp4" type="video/mp4">
           </video>
@@ -44,17 +44,17 @@ headerOverlay: true
 <section class="bg-canvas py-20 px-6 md:px-8">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
     <div>
-      <h2 class="font-serif font-normal text-[2.25rem] leading-[1.15] mb-6 text-ink">Everything important,<br>scattered everywhere.</h2>
-      <p class="text-dim text-[1.0625rem] leading-relaxed opacity-70">Wills, policies, property papers and bank accounts sit in different drawers, apps and heads. Most families discover the chaos only when they need answers most.</p>
+      <h2 class="font-bold tracking-tight text-[2.25rem] leading-[1.15] mb-6 text-ink">Everything important,<br>scattered everywhere.</h2>
+      <p class="text-dim text-[1.0625rem] leading-relaxed">Wills, policies, property papers and bank accounts sit in different drawers, apps and heads. Most families discover the chaos only when they need answers most.</p>
     </div>
     <div>
-      <div class="pb-6 border-b-2 border-dashed border-inset">
-        <p class="font-serif font-normal text-[3rem] leading-none text-ink"><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2244475&reg=3&lang=1" target="_blank" rel="noopener" class="hover:text-saffron-deep transition-colors">&#8377;73,000<br>crore</a></p>
-        <p class="text-muted text-sm mt-2 leading-snug"><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2244475&reg=3&lang=1" target="_blank" rel="noopener" class="hover:text-saffron-deep transition-colors underline decoration-dotted underline-offset-4">sitting unclaimed in bank deposits, insurance and mutual funds.</a></p>
+      <div class="pb-6 border-b-2 border-dashed border-hair">
+        <p class="font-normal tabular-nums tracking-tight text-[3rem] leading-none text-ink"><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2244475&reg=3&lang=1" target="_blank" rel="noopener" class="hover:text-marigold-deep transition-colors">&#8377;73,000<br>crore</a></p>
+        <p class="text-muted text-sm mt-2 leading-snug"><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2244475&reg=3&lang=1" target="_blank" rel="noopener" class="hover:text-marigold-deep transition-colors underline decoration-dotted underline-offset-4">sitting unclaimed in bank deposits, insurance and mutual funds.</a></p>
       </div>
       <div class="pt-6">
-        <p class="font-serif font-normal text-[3rem] leading-none text-ink"><a href="https://cleartax.in/s/succession-certificate-format" target="_blank" rel="noopener" class="hover:text-saffron-deep transition-colors">3 to 6<br>months</a></p>
-        <p class="text-muted text-sm mt-2 leading-snug"><a href="https://cleartax.in/s/succession-certificate-format" target="_blank" rel="noopener" class="hover:text-saffron-deep transition-colors underline decoration-dotted underline-offset-4">for a succession certificate when no nominee was named.</a></p>
+        <p class="font-normal tabular-nums tracking-tight text-[3rem] leading-none text-ink"><a href="https://cleartax.in/s/succession-certificate-format" target="_blank" rel="noopener" class="hover:text-marigold-deep transition-colors">3 to 6<br>months</a></p>
+        <p class="text-muted text-sm mt-2 leading-snug"><a href="https://cleartax.in/s/succession-certificate-format" target="_blank" rel="noopener" class="hover:text-marigold-deep transition-colors underline decoration-dotted underline-offset-4">for a succession certificate when no nominee was named.</a></p>
       </div>
     </div>
   </div>
@@ -63,43 +63,43 @@ headerOverlay: true
 <!-- Features -->
 <section class="bg-tint border-y border-hair py-20 px-6 md:px-8">
   <div class="max-w-6xl mx-auto">
-    <h2 class="font-serif font-normal text-[2.25rem] leading-[1.15] mb-12 text-ink">Organised the way you think.</h2>
+    <h2 class="font-bold tracking-tight text-[2.25rem] leading-[1.15] mb-12 text-ink">Organised the way you think.</h2>
     <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
 
-      <div class="bg-card border border-hair rounded-[14px] p-5 shadow-card">
-        <div class="w-9 h-9 border border-hair rounded-[8px] flex items-center justify-center mb-4 text-muted">
+      <div class="bg-card border border-hair rounded-[20px] p-5">
+        <div class="w-9 h-9 bg-inset rounded-[12px] flex items-center justify-center mb-4 text-marigold-deep">
           {% icon "file-text", "w-[18px] h-[18px]" %}
         </div>
         <h3 class="font-semibold text-[.875rem] text-ink mb-2">Documents and IDs</h3>
         <p class="text-muted text-[.8125rem] leading-relaxed">Aadhaar, PAN, passport, policies, deeds, wills.</p>
       </div>
 
-      <div class="bg-card border border-hair rounded-[14px] p-5 shadow-card">
-        <div class="w-9 h-9 border border-hair rounded-[8px] flex items-center justify-center mb-4 text-muted">
+      <div class="bg-card border border-hair rounded-[20px] p-5">
+        <div class="w-9 h-9 bg-inset rounded-[12px] flex items-center justify-center mb-4 text-marigold-deep">
           {% icon "landmark", "w-[18px] h-[18px]" %}
         </div>
         <h3 class="font-semibold text-[.875rem] text-ink mb-2">Assets and investments</h3>
         <p class="text-muted text-[.8125rem] leading-relaxed">Property, vehicles, deposits, mutual funds, PPF.</p>
       </div>
 
-      <div class="bg-card border border-hair rounded-[14px] p-5 shadow-card">
-        <div class="w-9 h-9 border border-hair rounded-[8px] flex items-center justify-center mb-4 text-muted">
+      <div class="bg-card border border-hair rounded-[20px] p-5">
+        <div class="w-9 h-9 bg-inset rounded-[12px] flex items-center justify-center mb-4 text-marigold-deep">
           {% icon "users", "w-[18px] h-[18px]" %}
         </div>
         <h3 class="font-semibold text-[.875rem] text-ink mb-2">People and advisors</h3>
         <p class="text-muted text-[.8125rem] leading-relaxed">Family, and the doctor, CA, lawyer who help.</p>
       </div>
 
-      <div class="bg-card border border-hair rounded-[14px] p-5 shadow-card">
-        <div class="w-9 h-9 border border-hair rounded-[8px] flex items-center justify-center mb-4 text-muted">
+      <div class="bg-card border border-hair rounded-[20px] p-5">
+        <div class="w-9 h-9 bg-inset rounded-[12px] flex items-center justify-center mb-4 text-marigold-deep">
           {% icon "lock", "w-[18px] h-[18px]" %}
         </div>
         <h3 class="font-semibold text-[.875rem] text-ink mb-2">Custody</h3>
         <p class="text-muted text-[.8125rem] leading-relaxed">Where every physical original is kept.</p>
       </div>
 
-      <div class="bg-card border border-hair rounded-[14px] p-5 shadow-card">
-        <div class="w-9 h-9 border border-hair rounded-[8px] flex items-center justify-center mb-4 text-muted">
+      <div class="bg-card border border-hair rounded-[20px] p-5">
+        <div class="w-9 h-9 bg-inset rounded-[12px] flex items-center justify-center mb-4 text-marigold-deep">
           {% icon "share-2", "w-[18px] h-[18px]" %}
         </div>
         <h3 class="font-semibold text-[.875rem] text-ink mb-2">Succession</h3>
@@ -117,8 +117,8 @@ headerOverlay: true
 <section class="bg-canvas py-20 px-6 md:px-8">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
     <div>
-      <h2 class="font-serif font-normal text-[2.25rem] leading-[1.15] mb-5 text-ink">Try free. Pay once.<br>Own forever.</h2>
-      <p class="text-dim text-[1.0625rem] leading-relaxed opacity-70">Use it free during the trial. After that, new records need a single lifetime purchase. Viewing, editing, import and export stay free, always.</p>
+      <h2 class="font-bold tracking-tight text-[2.25rem] leading-[1.15] mb-5 text-ink">Try free. Pay once.<br>Own forever.</h2>
+      <p class="text-dim text-[1.0625rem] leading-relaxed">Use it free during the trial. After that, new records need a single lifetime purchase. Viewing, editing, import and export stay free, always.</p>
     </div>
     {% include "partials/pricing-card.njk" %}
   </div>
@@ -128,7 +128,7 @@ headerOverlay: true
 <!-- FAQ -->
 <section class="bg-canvas px-6 md:px-8 py-20">
   <div class="max-w-[640px] mx-auto">
-    <h2 class="font-serif font-normal text-[2.25rem] leading-[1.15] mb-6 text-ink">Frequently asked questions</h2>
+    <h2 class="font-bold tracking-tight text-[2.25rem] leading-[1.15] mb-6 text-ink">Frequently asked questions</h2>
 
     <div class="divide-y divide-hair">
 
@@ -137,8 +137,8 @@ headerOverlay: true
           <span class="text-ink text-[.9375rem] font-medium">Where is my data stored?</span>
           {% icon "chevron-down", "w-4 h-4 text-muted shrink-0 transition-transform group-open:rotate-180" %}
         </summary>
-        <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-3">
-          On your device, and only your device. Collator doesn't have a server, so there's nothing for us to see, lose or hand over. Read more on our <a href="/privacy" class="text-saffron hover:text-saffron-deep transition-colors">privacy page</a>.
+        <p class="text-dim text-[.9375rem] leading-relaxed mt-3">
+          On your device, and only your device. Collator doesn't have a server, so there's nothing for us to see, lose or hand over. Read more on our <a href="/privacy" class="text-marigold-deep underline-offset-4 hover:underline">privacy page</a>.
         </p>
       </details>
 
@@ -147,7 +147,7 @@ headerOverlay: true
           <span class="text-ink text-[.9375rem] font-medium">What happens if I lose my phone?</span>
           {% icon "chevron-down", "w-4 h-4 text-muted shrink-0 transition-transform group-open:rotate-180" %}
         </summary>
-        <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-3">
+        <p class="text-dim text-[.9375rem] leading-relaxed mt-3">
           If you have iCloud or Google account backup turned on, restoring your new phone from that backup brings your vault back too. This is why we recommend keeping device backups on, since we can't recover anything ourselves.
         </p>
       </details>
@@ -157,7 +157,7 @@ headerOverlay: true
           <span class="text-ink text-[.9375rem] font-medium">Can I get my data out of Collator?</span>
           {% icon "chevron-down", "w-4 h-4 text-muted shrink-0 transition-transform group-open:rotate-180" %}
         </summary>
-        <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-3">
+        <p class="text-dim text-[.9375rem] leading-relaxed mt-3">
           Yes. Use the export option in the app to take a copy of your records whenever you want. Export and import are free, always, even after the trial ends.
         </p>
       </details>
@@ -167,7 +167,7 @@ headerOverlay: true
           <span class="text-ink text-[.9375rem] font-medium">How do I restore my purchase on a new device?</span>
           {% icon "chevron-down", "w-4 h-4 text-muted shrink-0 transition-transform group-open:rotate-180" %}
         </summary>
-        <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-3">
+        <p class="text-dim text-[.9375rem] leading-relaxed mt-3">
           Open Settings inside the app and choose Restore Purchases, while signed in with the same Apple ID or Google account you originally purchased with.
         </p>
       </details>
@@ -177,15 +177,15 @@ headerOverlay: true
           <span class="text-ink text-[.9375rem] font-medium">How do I delete my information?</span>
           {% icon "chevron-down", "w-4 h-4 text-muted shrink-0 transition-transform group-open:rotate-180" %}
         </summary>
-        <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-3">
+        <p class="text-dim text-[.9375rem] leading-relaxed mt-3">
           Delete individual records from within the app at any time, or uninstall Collator to remove everything stored locally. Whether a copy remains in your personal device backup is controlled by your iCloud or Google account settings.
         </p>
       </details>
 
     </div>
 
-    <p class="text-dim text-[.9375rem] leading-relaxed opacity-80 mt-8">
-      Didn't find what you're looking for? Email us at <a href="mailto:{{ site.contactEmail }}" class="text-saffron hover:text-saffron-deep transition-colors">{{ site.contactEmail }}</a> and we'll help directly.
+    <p class="text-dim text-[.9375rem] leading-relaxed mt-8">
+      Didn't find what you're looking for? Email us at <a href="mailto:{{ site.contactEmail }}" class="text-marigold-deep underline-offset-4 hover:underline">{{ site.contactEmail }}</a> and we'll help directly.
     </p>
   </div>
 </section>

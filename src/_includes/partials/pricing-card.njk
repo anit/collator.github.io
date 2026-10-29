@@ -1,22 +1,21 @@
-<div class="bg-card border border-hair rounded-[14px] p-8 shadow-card">
-  <p class="text-muted text-xs font-medium tracking-widest uppercase mb-4">Lifetime</p>
+<div class="bg-card border border-hair rounded-[20px] p-8">
+  <p class="label-overline text-marigold-deep mb-4">Lifetime</p>
   <div class="flex items-baseline gap-1 mb-6">
-    <span class="font-mono text-[2rem] font-medium text-ink">&#8377;</span>
-    <span class="font-mono text-[2rem] font-medium text-ink tracking-widest">{{ site.price }}</span>
+    <span class="text-[2rem] font-normal tabular-nums text-ink">&#8377;{{ site.price }}</span>
   </div>
   <ul class="space-y-3 mb-8">
-    <li class="flex items-center gap-3 text-[.9375rem] text-dim opacity-80">
-      {% icon "check", "w-4 h-4 text-saffron shrink-0" %}
+    <li class="flex items-center gap-3 text-[.9375rem] text-dim">
+      {% icon "check", "w-4 h-4 text-marigold-deep shrink-0" %}
       Add unlimited records
     </li>
-    <li class="flex items-center gap-3 text-[.9375rem] text-dim opacity-80">
-      {% icon "check", "w-4 h-4 text-saffron shrink-0" %}
+    <li class="flex items-center gap-3 text-[.9375rem] text-dim">
+      {% icon "check", "w-4 h-4 text-marigold-deep shrink-0" %}
       No subscription, ever
     </li>
-    <li class="flex items-center gap-3 text-[.9375rem] text-dim opacity-80">
-      {% icon "check", "w-4 h-4 text-saffron shrink-0" %}
+    <li class="flex items-center gap-3 text-[.9375rem] text-dim">
+      {% icon "check", "w-4 h-4 text-marigold-deep shrink-0" %}
       Free updates
     </li>
   </ul>
-  <a href="{{ ctaHref }}" class="block w-full text-center px-6 py-3.5 bg-saffron hover:bg-saffron-deep text-white font-medium rounded-full transition-colors">Get Collator</a>
+  <a href="{{ ctaHref }}" class="block w-full text-center px-6 py-3.5 bg-marigold hover:brightness-95 text-on-marigold font-semibold rounded-full transition">Get Collator</a>
 </div>

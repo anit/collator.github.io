@@ -2,33 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Design tokens: light mode ───────────────────────────────── */
+/* ─── Design tokens: marigold brand, light ────────────────────── */
+/* Values come from the app's brand guide. Cards lift by colour
+   (cream on sand), not shadows. */
 :root {
   /* Surfaces */
-  --canvas:        #FAF7F3;
-  --card:          #FFFFFF;
-  --tint:          #F5F0E9;
-  --inset:         #EBE3DA;
-
-  /* Navy — lighter variant for header/hero surfaces */
-  --navy-light:    #17283B;
+  --canvas:        #F3EEE3;  /* sand, page background */
+  --card:          #FFFCF5;  /* cream, cards */
+  --tint:          #E8E1D2;  /* stone, alternate bands and hover fills */
+  --inset:         #E8E1D2;  /* stone, chips and icon tiles */
 
   /* Text */
-  --text-hi:       #0C1829;
-  --text-dim:      #1E3254;
-  --text-muted:    #5B4937;
+  --text-hi:       #1A1612;  /* ink, headlines */
+  --text-dim:      #403A31;  /* body copy */
+  --text-muted:    #675E50;  /* captions, secondary text */
 
   /* Borders */
-  --border-hair:   rgba(12, 24, 41, 0.08);
-  --border-strong: rgba(12, 24, 41, 0.22);
-
-  /* Brand — saffron shifts subtly between modes */
-  --saffron:       #AA6D1B;
-  --saffron-deep:  #895710;
-  --saffron-acc:   #C9852E;
-
-  /* Shadows */
-  --shadow-card:   0px 1px 3px rgba(12, 24, 41, 0.04);
+  --border-hair:   #DDD4C2;
 }
 
 

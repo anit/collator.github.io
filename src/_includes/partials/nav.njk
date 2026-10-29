@@ -1,17 +1,18 @@
 <header class="{{ 'absolute' if headerOverlay else 'fixed' }} inset-x-0 top-0 z-50 flex items-center justify-between px-6 md:px-8 h-14 {{ 'bg-transparent' if headerOverlay else 'bg-canvas border-b border-hair' }}">
-  <a href="/" class="flex items-center gap-2.5">
-    <img src="/favicon.svg" alt="" width="26" height="26">
-    <span class="font-serif font-medium {{ 'text-white' if headerOverlay else 'text-ink' }} text-base" style="letter-spacing:-0.03em">Collator</span>
+  <!-- The rosette stands alone: the brand guide rules out setting "Collator" beside it as a lockup.
+       Micro variant because it renders under 40px. -->
+  <a href="/" aria-label="Collator home" class="flex items-center">
+    <img src="/assets/brand/rosette-micro-{{ 'dark' if headerOverlay else 'light' }}.svg" alt="" width="32" height="32">
   </a>
-  <nav class="flex items-center gap-7 {{ 'text-white/60' if headerOverlay else 'text-muted' }} text-sm">
+  <nav class="flex items-center gap-7 {{ 'text-parchment-dim' if headerOverlay else 'text-muted' }} text-sm">
     <details class="relative group">
-      <summary class="list-none cursor-pointer flex items-center gap-1.5 {% if section == 'who-its-for' %}{{ 'text-white' if headerOverlay else 'text-ink' }}{% else %}{{ 'hover:text-white' if headerOverlay else 'hover:text-ink' }}{% endif %} transition-colors [&::-webkit-details-marker]:hidden">
+      <summary class="list-none cursor-pointer flex items-center gap-1.5 {% if section == 'who-its-for' %}{{ 'text-parchment' if headerOverlay else 'text-ink' }}{% else %}{{ 'hover:text-parchment' if headerOverlay else 'hover:text-ink' }}{% endif %} transition-colors [&::-webkit-details-marker]:hidden">
         Who it's for
         {% icon "chevron-down", "w-3 h-3 transition-transform group-open:rotate-180" %}
       </summary>
-      <div class="absolute left-0 top-full mt-3 w-48 bg-card border border-hair rounded-[14px] shadow-card p-2">
+      <div class="absolute right-0 top-full mt-3 w-48 bg-card border border-hair rounded-[16px] p-2">
         {% for item in site.whoItsFor %}
-        <a href="/who-its-for/{{ item.slug }}" class="block px-3 py-2 rounded-[8px] text-sm transition-colors {% if activePage == item.slug %}bg-tint text-ink font-medium{% else %}text-dim hover:bg-tint hover:text-ink{% endif %}">{{ item.label }}</a>
+        <a href="/who-its-for/{{ item.slug }}" class="block px-3 py-2 rounded-[10px] text-sm transition-colors {% if activePage == item.slug %}bg-tint text-ink font-medium{% else %}text-dim hover:bg-tint hover:text-ink{% endif %}">{{ item.label }}</a>
         {% endfor %}
       </div>
     </details>

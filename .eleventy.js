@@ -13,7 +13,8 @@ module.exports = function (eleventyConfig) {
     }
     let svg = fs.readFileSync(filePath, 'utf8');
     svg = svg.replace(/<!--[\s\S]*?-->\s*/, ''); // strip the license comment
-    svg = svg.replace(/\s(width|height)="\d+"/g, ''); // let Tailwind size it
+    // Let Tailwind size it. Only touch the <svg> tag: shapes like <rect> need their own width/height.
+    svg = svg.replace(/<svg[^>]*>/, (tag) => tag.replace(/\s(width|height)="\d+"/g, ''));
     svg = svg.replace(/\sclass="[^"]*"/, ''); // drop lucide's own class
     svg = svg.replace('<svg', `<svg class="${classes || ''}"`);
     svg = svg.replace(/\n\s*\n/g, '\n'); // tidy blank lines left behind

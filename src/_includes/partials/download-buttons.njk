@@ -1,16 +1,16 @@
 <div class="flex flex-wrap gap-2 mb-4 md:gap-3 md:mb-5" id="download">
   <!-- App Store and Google Play marks are official brand logos, kept as-is rather than
        run through the generic icon shortcode, since Lucide doesn't (and shouldn't) ship brand marks. -->
-  <a href="{{ site.stores.appStore }}" class="inline-flex items-center gap-2 md:gap-3 pl-3 pr-4 py-2 md:pl-4 md:pr-5 md:py-[.6875rem] bg-white hover:bg-white/90 text-navy border border-hair shadow-card rounded-xl transition-colors">
+  <a href="{{ site.stores.appStore }}" class="inline-flex items-center gap-2 md:gap-3 pl-4 pr-5 py-2 md:pl-5 md:pr-6 md:py-[.6875rem] bg-card hover:bg-inset text-ink border border-hair rounded-full transition-colors">
     <svg width="18" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="md:w-[22px] md:h-[27px]">
       <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
     </svg>
     <div>
-      <div class="text-[9px] md:text-[10px] leading-none text-navy/50 mb-[3px]">Download on the</div>
+      <div class="text-[9px] md:text-[10px] leading-none text-muted mb-[3px]">Download on the</div>
       <div class="text-[.8125rem] md:text-[.9375rem] font-semibold leading-none">App Store</div>
     </div>
   </a>
-  <a href="{{ site.stores.googlePlay }}" class="inline-flex items-center gap-2 md:gap-3 pl-3 pr-4 py-2 md:pl-4 md:pr-5 md:py-[.6875rem] bg-white hover:bg-white/90 border border-hair shadow-card rounded-xl transition-colors">
+  <a href="{{ site.stores.googlePlay }}" class="inline-flex items-center gap-2 md:gap-3 pl-4 pr-5 py-2 md:pl-5 md:pr-6 md:py-[.6875rem] bg-card hover:bg-inset border border-hair rounded-full transition-colors">
     <svg width="16" height="18" viewBox="0 0 24 24" aria-hidden="true" class="md:w-5 md:h-[22px]">
       <path d="M3.18 23.76c.3.17.65.19.97.07L14.84 12 10.9 8.06 3.18 23.76z" fill="#EA4335"/>
       <path d="M20.43 10.6 17.3 8.83l-3.64 3.17 3.64 3.17 3.16-1.78c.9-.51.9-1.28-.03-1.79z" fill="#FBBC05"/>
@@ -18,12 +18,12 @@
       <path d="M14.84 12 3.15.17c-.32-.12-.67-.1-.97.08L14.84 12z" fill="#4285F4"/>
     </svg>
     <div>
-      <div class="text-[9px] md:text-[10px] leading-none text-navy/50 mb-[3px]">Get it on</div>
-      <div class="text-[.8125rem] md:text-[.9375rem] font-semibold leading-none text-navy">Google Play</div>
+      <div class="text-[9px] md:text-[10px] leading-none text-muted mb-[3px]">Get it on</div>
+      <div class="text-[.8125rem] md:text-[.9375rem] font-semibold leading-none text-ink">Google Play</div>
     </div>
   </a>
 </div>
 
 {% if not hideCaption %}
-<p class="text-white/35 text-sm italic">Free to try. Pay once. No subscription.</p>
+<p class="text-parchment-dim text-sm">Free to try. Pay once. No subscription.</p>
 {% endif %}

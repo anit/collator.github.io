@@ -1,31 +1,31 @@
-<footer id="site-footer" class="bg-navy border-t border-white/[.06] py-14 px-6 md:px-8">
+<footer id="site-footer" class="bg-night border-t border-night-line py-14 px-6 md:px-8">
   <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
     <div class="col-span-2 md:col-span-1">
-      <p class="font-serif font-medium text-white text-base mb-1" style="letter-spacing:-0.03em">Collator</p>
-      <p class="text-white/40 text-sm leading-snug mb-3">A calm, private place for everything your family would need to find.</p>
-      <p class="text-white/30 text-sm">Made with care by R41</p>
+      <img src="/assets/brand/rosette-mini-dark.svg" alt="Collator" width="48" height="48" class="mb-4">
+      <p class="text-parchment-dim text-sm leading-snug mb-3">A calm, private place for everything your family would need to find.</p>
+      <p class="text-parchment-dim text-sm">Made with care by R41</p>
     </div>
     <div>
-      <p class="text-white/80 text-sm font-semibold mb-3">Legal</p>
+      <p class="text-parchment text-sm font-semibold mb-3">Legal</p>
       <ul class="space-y-2">
-        <li><a href="/privacy" class="{% if activePage == 'privacy' %}text-white/80{% else %}text-white/45 hover:text-white/70{% endif %} text-sm transition-colors">Privacy policy</a></li>
-        <li><a href="/terms" class="{% if activePage == 'terms' %}text-white/80{% else %}text-white/45 hover:text-white/70{% endif %} text-sm transition-colors">Terms of service</a></li>
+        <li><a href="/privacy" class="{% if activePage == 'privacy' %}text-parchment{% else %}text-parchment-dim hover:text-parchment{% endif %} text-sm transition-colors">Privacy policy</a></li>
+        <li><a href="/terms" class="{% if activePage == 'terms' %}text-parchment{% else %}text-parchment-dim hover:text-parchment{% endif %} text-sm transition-colors">Terms of service</a></li>
       </ul>
     </div>
     <div>
-      <p class="text-white/80 text-sm font-semibold mb-3">Product</p>
+      <p class="text-parchment text-sm font-semibold mb-3">Product</p>
       <ul class="space-y-2">
-        <li><a href="/support" class="{% if activePage == 'support' %}text-white/80{% else %}text-white/45 hover:text-white/70{% endif %} text-sm transition-colors">Support</a></li>
-        <li><a href="{{ site.userjot.feedback }}" target="_blank" rel="noopener" class="text-white/45 text-sm hover:text-white/70 transition-colors">Feedback</a></li>
-        <li><a href="{{ site.userjot.roadmap }}" target="_blank" rel="noopener" class="text-white/45 text-sm hover:text-white/70 transition-colors">Roadmap</a></li>
-        <li><a href="{{ site.userjot.changelog }}" target="_blank" rel="noopener" class="text-white/45 text-sm hover:text-white/70 transition-colors">Changelog</a></li>
+        <li><a href="/support" class="{% if activePage == 'support' %}text-parchment{% else %}text-parchment-dim hover:text-parchment{% endif %} text-sm transition-colors">Support</a></li>
+        <li><a href="{{ site.userjot.feedback }}" target="_blank" rel="noopener" class="text-parchment-dim text-sm hover:text-parchment transition-colors">Feedback</a></li>
+        <li><a href="{{ site.userjot.roadmap }}" target="_blank" rel="noopener" class="text-parchment-dim text-sm hover:text-parchment transition-colors">Roadmap</a></li>
+        <li><a href="{{ site.userjot.changelog }}" target="_blank" rel="noopener" class="text-parchment-dim text-sm hover:text-parchment transition-colors">Changelog</a></li>
       </ul>
     </div>
     <div>
-      <p class="text-white/80 text-sm font-semibold mb-3">Get it</p>
+      <p class="text-parchment text-sm font-semibold mb-3">Get it</p>
       <ul class="space-y-2">
-        <li><a href="{{ site.stores.appStore }}" class="text-white/45 text-sm hover:text-white/70 transition-colors">App Store</a></li>
-        <li><a href="{{ site.stores.googlePlay }}" class="text-white/45 text-sm hover:text-white/70 transition-colors">Google Play</a></li>
+        <li><a href="{{ site.stores.appStore }}" class="text-parchment-dim text-sm hover:text-parchment transition-colors">App Store</a></li>
+        <li><a href="{{ site.stores.googlePlay }}" class="text-parchment-dim text-sm hover:text-parchment transition-colors">Google Play</a></li>
       </ul>
     </div>
   </div>

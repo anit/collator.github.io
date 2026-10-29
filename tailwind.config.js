@@ -6,8 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Semantic tokens — resolve via CSS custom properties.
-        // These automatically reflect the active theme; no dark: prefix needed on colour utilities.
+        // Semantic tokens — resolve via CSS custom properties in src/css/input.css.
         canvas:  'var(--canvas)',
         card:    'var(--card)',
         tint:    'var(--tint)',
@@ -17,20 +16,22 @@ module.exports = {
         muted:   'var(--text-muted)',
         hair:    'var(--border-hair)',
 
-        // Fixed brand colours — always-dark sections stay dark in both modes.
-        navy:             '#0C1829',
-        'navy-light':     'var(--navy-light)',
-        saffron:          'var(--saffron)',
-        'saffron-deep':   'var(--saffron-deep)',
-        'saffron-accent': 'var(--saffron-acc)',
+        // Fixed brand colours from the app's marigold brand guide.
+        // Bright marigold is a fill only: put on-marigold text on it, never white.
+        marigold:        '#FFB224',
+        'marigold-deep': '#965700',
+        'on-marigold':   '#1A1408',
+
+        // Night bands stay dark.
+        night:           '#15120F',
+        'night-card':    '#24201A',
+        'night-raised':  '#2E2921',
+        'night-line':    '#3A342B',
+        parchment:       '#F1EADB',
+        'parchment-dim': '#ADA493',
       },
       fontFamily: {
-        serif: ['Fraunces', 'Georgia', 'serif'],
-        sans:  ['Inter', 'system-ui', 'sans-serif'],
-        mono:  ['JetBrains Mono', 'monospace'],
-      },
-      boxShadow: {
-        card: 'var(--shadow-card)',
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },
