@@ -30,6 +30,26 @@ eleventyExcludeFromCollections: true
         target = '/' + query;
       }
 
+      // The page leaves before a tracker could load, so send the visit as a beacon, which the browser
+      // delivers after the page is gone. A plain string body avoids a CORS preflight.
+      var umamiId = {{ site.umamiWebsiteId | dump | safe }};
+      if (umamiId && location.hostname === 'collator.app' && navigator.sendBeacon) {
+        try {
+          navigator.sendBeacon('https://gateway.umami.is/api/send', JSON.stringify({
+            type: 'event',
+            payload: {
+              website: umamiId,
+              hostname: location.hostname,
+              url: location.href,
+              referrer: document.referrer,
+              title: 'Get Collator',
+              language: navigator.language,
+              screen: screen.width + 'x' + screen.height
+            }
+          }));
+        } catch (e) {}
+      }
+
       location.replace(target);
     })();
   </script>

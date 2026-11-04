@@ -26,6 +26,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css?v={{ build.version }}">
+  {% if site.umamiWebsiteId %}
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ site.umamiWebsiteId }}" data-domains="collator.app"></script>
+  {% endif %}
 
 </head>
 <body class="bg-canvas font-sans text-ink antialiased">
