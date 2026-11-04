@@ -2,7 +2,7 @@ module.exports = {
   price: 999,
   contactEmail: 'anitrai011@gmail.com',
   // Umami Cloud website ID. Public, since it ships in every page. Empty turns analytics off.
-  umamiWebsiteId: '',
+  umamiWebsiteId: '2efbefb8-4264-4c06-9b9b-af69eb5c26ab',
   userjot: {
     feedback: 'https://collator.userjot.com',
     roadmap: 'https://collator.userjot.com/roadmap',
