@@ -8,6 +8,12 @@ module.exports = {
     roadmap: 'https://collator.userjot.com/roadmap',
     changelog: 'https://collator.userjot.com/changelog',
   },
+  url: 'https://collator.app',
+  social: [
+    { label: 'Instagram', href: 'https://www.instagram.com/collator.app/' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/145468910/' },
+    { label: 'X', href: 'https://x.com/CollatorApp' },
+  ],
   stores: {
     appStore: 'https://apps.apple.com/in/app/collator/id6791439666',
     googlePlay: 'https://play.google.com/store/apps/details?id=com.r41.collator',

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <meta name="theme-color" content="#F3EEE3">
   <meta property="og:title"       content="{{ ogTitle or title }}">
   <meta property="og:description" content="{{ ogDescription or description }}">
@@ -26,6 +27,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css?v={{ build.version }}">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ site.url }}/#org",
+        "name": "R41",
+        "url": "{{ site.url }}",
+        "logo": "{{ site.url }}/icon-512.png",
+        "sameAs": [{% for s in site.social %}"{{ s.href }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}/#website",
+        "name": "Collator",
+        "url": "{{ site.url }}",
+        "publisher": { "@id": "{{ site.url }}/#org" }
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "{{ site.url }}/#app",
+        "name": "Collator",
+        "alternateName": "Collator – Family Vault",
+        "description": "A private family document vault for Indian families. Documents, assets, policies, nominees and people, organised on your device. No cloud, no accounts.",
+        "url": "{{ site.url }}",
+        "image": "{{ site.url }}/assets/og-image.png",
+        "operatingSystem": "iOS, Android",
+        "applicationCategory": "UtilitiesApplication",
+        "publisher": { "@id": "{{ site.url }}/#org" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+        "sameAs": ["{{ site.stores.appStore }}", "{{ site.stores.googlePlay }}"]
+      }
+    ]
+  }
+  </script>
   {% if site.umamiWebsiteId %}
   <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ site.umamiWebsiteId }}" data-domains="collator.app"></script>
   {% endif %}
