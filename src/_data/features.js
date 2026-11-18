@@ -1,0 +1,136 @@
+module.exports = [
+  {
+    slug: 'documents',
+    label: 'Documents',
+    title: 'Family Document Organiser App: Find Any Paper in Seconds | Collator',
+    description: 'Aadhaar, PAN, passport, RC, LIC policy, sale deed. Snap it, file it, find it in two taps. Stays on your phone, no cloud.',
+    headline: "Where's Papa's LIC policy?",
+    story: 'Passport renewal. First question at the counter: "Old passport dikhaiye."',
+    videos: [
+      { id: 'xGXiurdQNkE', title: 'Find any family paper in two taps' },
+      { id: '3ha7miC5NCY', title: 'Snap it. File it. Find it.' },
+    ],
+    points: [
+      { icon: 'camera', title: 'Snap it', text: 'Photograph the paper. Add the number and expiry once.' },
+      { icon: 'folder-open', title: 'File it', text: '87 kinds, from Aadhaar to sale deed, each in its place.' },
+      { icon: 'search', title: 'Find it', text: 'Search by name, number or person. Two taps.' },
+    ],
+    faq: [
+      { q: 'Is it like DigiLocker?', a: "DigiLocker holds the government's copies. Collator holds everything else: your policies, deeds, FD receipts and old passports, and who they belong to." },
+      { q: 'Where are my files stored?', a: 'On your phone. Nothing is uploaded.' },
+    ],
+  },
+  {
+    slug: 'assets',
+    label: 'Assets',
+    title: 'Family Asset List App: Track Every Account, FD and Property | Collator',
+    description: '₹1.84 lakh crore lies unclaimed in India. Keep one list of every flat, FD, PPF, fund and policy, with who owns it and who gets it.',
+    headline: '₹1.84 lakh crore lies unclaimed. Keep yours off that list.',
+    story: 'Deposits, insurance, PF and shares that families forgot, or never knew about. (Finance Ministry, October 2025)',
+    videos: [{ id: 'Twre0bl8nOo', title: 'Everything you own, in one list' }],
+    points: [
+      { icon: 'list', title: 'One list', text: 'Flat, car, savings, FD, PPF, mutual funds, gold.' },
+      { icon: 'user-check', title: 'Owner and heir', text: 'Tap any item to see who owns it and who gets it.' },
+      { icon: 'timer', title: 'Ten seconds', text: "That old co-op bank account? Add it now, before it's forgotten." },
+    ],
+    faq: [
+      { q: 'Does Collator connect to my bank?', a: 'No. You add what you own. Nothing is linked or synced.' },
+      { q: 'How do I find old unclaimed money?', a: "RBI's UDGAM portal searches unclaimed bank deposits. Collator stops new ones from happening." },
+    ],
+  },
+  {
+    slug: 'nominees',
+    label: 'Nominees and heirs',
+    title: 'Nominee vs Legal Heir: Check Your Family’s Gaps | Collator',
+    description: "A nominee isn't the owner; your Will decides. Collator shows every account with no heir and every policy with no nominee, so you can fix them.",
+    headline: "It took them four months to find Dad's bank accounts.",
+    story: 'Two banks nobody knew about. An FD found through a letter to the old house. A 22-year-old PPF account they nearly missed. (r/personalfinanceindia)',
+    videos: [
+      { id: 'zOjerCWPhrQ', title: 'Who gets what? Zero gaps.' },
+      { id: 'j58dc3S1Dn0', title: 'It all connects' },
+    ],
+    points: [
+      { icon: 'scan-search', title: 'See the gaps', text: 'Assets with no heir, policies with no nominee, counted.' },
+      { icon: 'mouse-pointer-click', title: 'Fix in a tap', text: 'Pick the person. Save. The count drops.' },
+      { icon: 'scroll-text', title: 'Link the Will', text: 'Who gets what, written down where the family can see it.' },
+    ],
+    faq: [
+      { q: 'Is a nominee the legal owner?', a: 'No. A nominee collects the money. The legal heirs, or the Will, decide who keeps it.' },
+      { q: 'Does Collator make a Will?', a: 'No. It records what you own and links to your Will. Get the Will drafted by a lawyer.' },
+    ],
+  },
+  {
+    slug: 'originals',
+    label: 'Where originals are kept',
+    title: 'Where Are the Original Documents? Track Every Original | Collator',
+    description: 'Sale deed with the bank, Will in the locker, birth certificate in Jaipur. Record where every original is kept and who has the key.',
+    headline: 'Sale deed? With the bank. Will? Locker B-47.',
+    story: "He kept every paper to himself. When he died suddenly, his family couldn't find any of it, not even the Aadhaar cards. (r/india)",
+    videos: [
+      { id: 'mel4tNi_MYE', title: 'Two homes, two cities, one list' },
+      { id: 'dMpCynZ_w_4', title: 'Not just in your head' },
+    ],
+    points: [
+      { icon: 'map-pin', title: 'Add the place', text: "Home safe, bank locker, Papa's almirah in Jaipur." },
+      { icon: 'key-round', title: 'Who has the key', text: 'And where the spare is.' },
+      { icon: 'file-check', title: 'File the originals', text: 'Each document shows where its original sits.' },
+    ],
+    faq: [
+      { q: 'Why not just scan everything?', a: 'Banks, courts and registrars ask for originals. A scan tells you what you have. Collator tells you where it is.' },
+      { q: "What about my parents' papers in another city?", a: 'Add their house as a place. Two homes, one list.' },
+    ],
+  },
+  {
+    slug: 'reminders',
+    label: 'Renewal reminders',
+    title: 'Insurance and Passport Renewal Reminder App | Collator',
+    description: 'Car insurance, health policy, passport, FD maturity. Collator counts down and reminds you before anything lapses.',
+    headline: 'His car insurance lapsed. Days later, a crash.',
+    story: 'No valid insurance meant the owner paid for all of it. (Team-BHP)',
+    videos: [{ id: 'mxFU7Hp55m8', title: 'Before it lapses' }],
+    points: [
+      { icon: 'calendar-clock', title: 'Every expiry, counted down', text: 'Insurance, passport, licence, FD.' },
+      { icon: 'bell-ring', title: 'Reminded first', text: 'A week before, not the day after.' },
+      { icon: 'refresh-cw', title: 'Renew in a tap', text: 'New date, save, and the countdown starts again.' },
+    ],
+    faq: [
+      { q: 'Do I have to set each reminder?', a: 'You enter the expiry date once, when you add the document. Collator handles the countdown from there.' },
+      { q: 'Does it work offline?', a: 'Yes. Reminders run on your phone.' },
+    ],
+  },
+  {
+    slug: 'emergency',
+    label: 'Emergency essentials',
+    title: 'Documents Needed for Hospital Admission, Ready in Two Taps | Collator',
+    description: 'Aadhaar, PAN, health insurance card and policy number, ready to show or share at the hospital desk. Pin it before you need it.',
+    headline: 'Hospital desk. 11 PM. "Policy number? Jaldi."',
+    story: '',
+    videos: [{ id: 'opGnMJ7fnTg', title: 'Emergency essentials in two taps' }],
+    points: [
+      { icon: 'id-card', title: 'One set', text: 'Aadhaar, PAN, passport, health card, policy number.' },
+      { icon: 'share-2', title: 'Share it', text: 'Send the whole set in one go.' },
+      { icon: 'pin', title: 'Pin it', text: 'On Home, before the night you need it.' },
+    ],
+    faq: [
+      { q: 'What documents does a hospital ask for?', a: 'Usually photo ID, the health insurance card, the policy number, and the TPA details for cashless claims.' },
+      { q: 'Can I keep a set for my parents?', a: 'Yes. Make one for each person.' },
+    ],
+  },
+  {
+    slug: 'people',
+    label: 'People to call',
+    title: 'Family Contacts App: LIC Agent, CA, Lawyer, Doctor | Collator',
+    description: "A family found Dad's insurance policy only when the agent called. Save every advisor: name, role, number.",
+    headline: "They found Dad's policy only when the agent called.",
+    story: '(r/personalfinanceindia)',
+    videos: [{ id: 'T0O_m0IEii4', title: 'Who would they call?' }],
+    points: [
+      { icon: 'users', title: 'Family and advisors', text: 'The LIC agent, CA, lawyer and doctor, in one place.' },
+      { icon: 'contact', title: 'Name, role, number', text: 'Saved from your contacts in ten seconds.' },
+      { icon: 'link', title: 'Linked to the papers', text: 'Tap the agent to see every policy they handle.' },
+    ],
+    faq: [
+      { q: "Isn't this just my phone's contacts?", a: "Contacts don't say \"this is Papa's LIC agent, for these three policies\". Collator does." },
+    ],
+  },
+];

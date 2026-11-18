@@ -1,0 +1,85 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: features
+  size: 1
+  alias: f
+  addAllPagesToCollections: true
+permalink: "/{{ f.slug }}/"
+section: "features"
+ctaHref: "#download"
+eleventyComputed:
+  title: "{{ f.title }}"
+  description: "{{ f.description }}"
+  ogUrl: "https://collator.app/{{ f.slug }}/"
+  activePage: "{{ f.slug }}"
+---
+<section class="bg-night pt-14">
+  <div class="max-w-6xl mx-auto px-6 md:px-8 pt-14 pb-16 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="label-overline text-marigold mb-4">{{ f.label }}</p>
+      <h1 class="font-bold tracking-tight text-parchment leading-[1.1] text-[2.25rem] md:text-[3.25rem] mb-5">{{ f.headline }}</h1>
+      {% if f.story %}<p class="text-parchment-dim text-[1.0625rem] leading-relaxed mb-8 max-w-md">{{ f.story }}</p>{% endif %}
+      {% include "partials/download-buttons.njk" %}
+    </div>
+    <div class="flex justify-center gap-4">
+      {% for v in f.videos %}
+      <div class="w-full max-w-[260px] aspect-[9/16] rounded-[20px] overflow-hidden bg-black border border-night-line">
+        <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ v.id }}?rel=0" title="{{ v.title }}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-canvas py-16 px-6 md:px-8">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+    {% for p in f.points %}
+    <div class="bg-card border border-hair rounded-[20px] p-6">
+      <div class="w-9 h-9 bg-inset rounded-[12px] flex items-center justify-center mb-4 text-marigold-deep">
+        {% icon p.icon, "w-[18px] h-[18px]" %}
+      </div>
+      <h2 class="font-semibold text-[1rem] text-ink mb-2">{{ p.title }}</h2>
+      <p class="text-muted text-[.9375rem] leading-relaxed">{{ p.text }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="bg-tint border-y border-hair py-16 px-6 md:px-8">
+  <div class="max-w-[640px] mx-auto">
+    <h2 class="font-bold tracking-tight text-[1.75rem] leading-[1.15] mb-6 text-ink">Questions</h2>
+    <div class="divide-y divide-hair">
+      {% for item in f.faq %}
+      <details class="group py-4">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+          <span class="text-ink text-[.9375rem] font-medium">{{ item.q }}</span>
+          {% icon "chevron-down", "w-4 h-4 text-muted shrink-0 transition-transform group-open:rotate-180" %}
+        </summary>
+        <p class="text-dim text-[.9375rem] leading-relaxed mt-3">{{ item.a }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="download" class="bg-canvas py-16 px-6 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <p class="label-overline text-marigold-deep mb-4">More of what Collator does</p>
+    <div class="flex flex-wrap gap-3 mb-12">
+      {% for other in features %}{% if other.slug != f.slug %}
+      <a href="/{{ other.slug }}/" class="inline-flex items-center gap-2 px-5 py-3 bg-card border border-hair rounded-[20px] text-ink text-[.9375rem] font-medium hover:border-marigold-deep transition-colors">{{ other.label }} &rarr;</a>
+      {% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{% for item in f.faq %}
+    { "@type": "Question", "name": {{ item.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump | safe }} } }{% if not loop.last %},{% endif %}{% endfor %}
+  ]
+}
+</script>
