@@ -13,6 +13,7 @@ module.exports = {
     { label: 'Instagram', href: 'https://www.instagram.com/collator.app/' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/company/145468910/' },
     { label: 'X', href: 'https://x.com/CollatorApp' },
+    { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61596618670934' },
   ],
   stores: {
     appStore: 'https://apps.apple.com/in/app/collator/id6791439666',
