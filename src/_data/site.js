@@ -8,12 +8,18 @@ module.exports = {
     roadmap: 'https://collator.userjot.com/roadmap',
     changelog: 'https://collator.userjot.com/changelog',
   },
+  productHunt: {
+    href: 'https://www.producthunt.com/products/collator?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-collator',
+    badge: 'https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1332782&theme=dark',
+  },
   url: 'https://collator.app',
   social: [
     { label: 'Instagram', href: 'https://www.instagram.com/collator.app/' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/company/145468910/' },
     { label: 'X', href: 'https://x.com/CollatorApp' },
     { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61596618670934' },
+    { label: 'YouTube', href: 'https://www.youtube.com/channel/UCr8WBTNMGV94RX7phRzB8NQ' },
+    { label: 'Product Hunt', href: 'https://www.producthunt.com/products/collator' },
   ],
   stores: {
     appStore: 'https://apps.apple.com/in/app/collator/id6791439666',
