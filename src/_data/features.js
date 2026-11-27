@@ -3,7 +3,7 @@ module.exports = [
     slug: 'documents',
     label: 'Documents',
     title: 'Family Document Organiser App: Find Any Paper in Seconds | Collator',
-    description: 'Aadhaar, PAN, passport, RC, LIC policy, sale deed. Snap it, file it, find it in two taps. Stays on your phone, no cloud.',
+    description: 'Aadhaar, PAN, passport, RC, LIC policy, sale deed. Snap it, file it, find it in two taps. Never leaves your phone.',
     headline: "Where's Papa's LIC policy?",
     story: 'Passport renewal. First question at the counter: "Old passport dikhaiye."',
     videos: [
